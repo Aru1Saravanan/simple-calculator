@@ -1,0 +1,93 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat&display=swap");
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  font-family: Montserrat, "sans-serif";
+}
+
+body {
+  padding: 0;
+  margin: 0;
+  background: #f1f1f1;
+}
+
+.container {
+  min-height: 100vh;
+  width: 50vh;
+  margin: 0 auto;
+  display: grid;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-content: center;
+  grid-template-columns: repeat(4, 75px);
+  grid-template-rows: minmax(120px, auto) repeat(6, 75px);
+  filter: drop-shadow(4px 5px 5px rgba(170, 150, 150, 0.514))
+    drop-shadow(-4px -5px 4px #fff);
+}
+
+.container > button {
+  outline: none;
+  border: none;
+  background: #f1f1f1;
+  font-size: 1.25rem;
+  cursor: pointer;
+}
+
+sup {
+  font-size: 0.7rem;
+}
+
+.numbers:hover,
+.numbers:focus {
+  background: rgb(97, 94, 94);
+  color: #fff;
+}
+
+.operand:hover,
+.operand:focus {
+  background: rgba(3, 82, 252, 0.836);
+  color: #fff;
+}
+
+.delete {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.clear,
+.delete {
+  &:hover,
+  &:focus {
+    background: rgba(252, 3, 3, 0.836);
+    color: #fff;
+  }
+}
+
+.container .double-width {
+  grid-column: span 2;
+  &:last-child:hover {
+    background: rgba(31, 175, 2, 0.836);
+    color: #fff;
+  }
+}
+
+.display-container {
+  background: rgba(0, 0, 17, 0.85);
+  padding: 0.5em;
+  grid-column: 1/-1;
+  text-align: right;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+.previous-content {
+  color: rgba(165, 253, 0, 0.6);
+}
+
+.current-content {
+  font-size: 1.6rem;
+  color: rgb(200, 255, 0);
+}

@@ -1,0 +1,114 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat&display=swap");
+*,
+*::before,
+*::after {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: Montserrat, "sans-serif";
+}
+
+body {
+  padding: 0;
+  margin: 0;
+  background: #f1f1f1;
+}
+
+.container {
+  min-height: 100vh;
+  width: 50vh;
+  margin: 0 auto;
+  display: -ms-grid;
+  display: grid;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  -ms-grid-columns: (75px)[4];
+      grid-template-columns: repeat(4, 75px);
+  -ms-grid-rows: minmax(120px, auto) (75px)[6];
+      grid-template-rows: minmax(120px, auto) repeat(6, 75px);
+  -webkit-filter: drop-shadow(4px 5px 5px rgba(170, 150, 150, 0.514)) drop-shadow(-4px -5px 4px #fff);
+          filter: drop-shadow(4px 5px 5px rgba(170, 150, 150, 0.514)) drop-shadow(-4px -5px 4px #fff);
+}
+
+.container > button {
+  outline: none;
+  border: none;
+  background: #f1f1f1;
+  font-size: 1.25rem;
+  cursor: pointer;
+}
+
+sup {
+  font-size: 0.7rem;
+}
+
+.numbers:hover,
+.numbers:focus {
+  background: #615e5e;
+  color: #fff;
+}
+
+.operand:hover,
+.operand:focus {
+  background: rgba(3, 82, 252, 0.836);
+  color: #fff;
+}
+
+.delete {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.clear:hover, .clear:focus,
+.delete:hover,
+.delete:focus {
+  background: rgba(252, 3, 3, 0.836);
+  color: #fff;
+}
+
+.container .double-width {
+  grid-column: span 2;
+}
+
+.container .double-width:last-child:hover {
+  background: rgba(31, 175, 2, 0.836);
+  color: #fff;
+}
+
+.display-container {
+  background: rgba(0, 0, 17, 0.85);
+  padding: 0.5em;
+  grid-column: 1/-1;
+  text-align: right;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+.previous-content {
+  color: rgba(165, 253, 0, 0.6);
+}
+
+.current-content {
+  font-size: 1.6rem;
+  color: #c8ff00;
+}
