@@ -5,6 +5,7 @@
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   font-family: Montserrat, "sans-serif";
+  -webkit-tap-highlight-color: none;
 }
 
 body {
@@ -48,16 +49,27 @@ sup {
   font-size: 0.7rem;
 }
 
-.numbers:hover,
-.numbers:focus {
-  background: #615e5e;
-  color: #fff;
+.numbers {
+  font-weight: bold;
+  -webkit-transition: all 0.25s ease;
+  transition: all 0.25s ease;
 }
 
-.operand:hover,
-.operand:focus {
-  background: rgba(3, 82, 252, 0.836);
-  color: #fff;
+.numbers:active {
+  -webkit-box-shadow: inset 4px 4px 8px #acaaaa7c, inset -4px -4px 8px #fff;
+          box-shadow: inset 4px 4px 8px #acaaaa7c, inset -4px -4px 8px #fff;
+}
+
+.operand,
+.negation {
+  color: #aa5e16;
+  font-weight: bold;
+}
+
+.operand:hover:active,
+.negation:hover:active {
+  -webkit-box-shadow: inset 4px 4px 8px #acaaaa7c, inset -4px -4px 8px #fff;
+          box-shadow: inset 4px 4px 8px #acaaaa7c, inset -4px -4px 8px #fff;
 }
 
 .delete {
@@ -72,20 +84,25 @@ sup {
           justify-content: center;
 }
 
-.clear:hover, .clear:focus,
-.delete:hover,
-.delete:focus {
-  background: rgba(252, 3, 3, 0.836);
-  color: #fff;
+.clear,
+.delete {
+  color: #1d2cfd;
+  font-weight: bold;
+}
+
+.clear:active,
+.delete:active {
+  -webkit-box-shadow: inset 4px 4px 8px #acaaaa7c, inset -4px -4px 8px #fff;
+          box-shadow: inset 4px 4px 8px #acaaaa7c, inset -4px -4px 8px #fff;
 }
 
 .container .double-width {
   grid-column: span 2;
 }
 
-.container .double-width:last-child:hover {
-  background: rgba(31, 175, 2, 0.836);
-  color: #fff;
+.container .double-width:active {
+  -webkit-box-shadow: inset 4px 4px 8px #acaaaa7c, inset -4px -4px 8px #fff;
+          box-shadow: inset 4px 4px 8px #acaaaa7c, inset -4px -4px 8px #fff;
 }
 
 .display-container {
@@ -105,10 +122,15 @@ sup {
 }
 
 .previous-content {
+  letter-spacing: 0.1rem;
   color: rgba(165, 253, 0, 0.6);
 }
 
 .current-content {
   font-size: 1.6rem;
+  font-weight: bolder;
+  letter-spacing: 0.15rem;
   color: #c8ff00;
+  word-wrap: break-word;
+  word-break: break-all;
 }
