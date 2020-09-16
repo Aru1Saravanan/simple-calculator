@@ -32,7 +32,7 @@ class Calculator {
         let computation;
         let previous = parseFloat(this.previousVal);
         let current = parseFloat(this.currentVal);
-        if ((!bacisOps.includes(this.operation) && (isNaN(previous) || isNaN(current))) && (!singleOps.includes(this.operation) && isNaN(current))) return
+        if ((!bacisOps.includes(this.operation) && (isNaN(previous) && isNaN(current))) || (!singleOps.includes(this.operation) && isNaN(current))) return
         switch (this.operation) {
             case ("add"):
                 computation = previous + current;

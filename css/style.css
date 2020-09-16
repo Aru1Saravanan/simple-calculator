@@ -1,7 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat&display=swap");
-*,
-*::before,
-*::after {
+* {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   font-family: Montserrat, "sans-serif";
@@ -9,13 +7,30 @@
 }
 
 body {
+  min-height: 100vh;
   padding: 0;
   margin: 0;
   background: #f1f1f1;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+main {
+  margin-top: 4em;
 }
 
 .container {
-  min-height: 100vh;
   width: 50vh;
   margin: 0 auto;
   display: -ms-grid;
@@ -105,6 +120,11 @@ sup {
           box-shadow: inset 4px 4px 8px #acaaaa7c, inset -4px -4px 8px #fff;
 }
 
+.equal {
+  font-weight: bold;
+  color: #706b1b;
+}
+
 .display-container {
   background: rgba(0, 0, 17, 0.85);
   padding: 0.5em;
@@ -133,4 +153,14 @@ sup {
   color: #c8ff00;
   word-wrap: break-word;
   word-break: break-all;
+}
+
+footer {
+  font-size: 1.2rem;
+  margin-bottom: 2em;
+  text-align: center;
+}
+
+footer i {
+  font-size: 1.25rem;
 }
